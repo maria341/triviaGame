@@ -18,73 +18,29 @@
 
     <div id="container">
 
-        <div class="row"></div>
-        <h1>Hooray! Trivia Quizzes Game Time!!</h1>
-        <h2>Instructions:</h2>
-        <p>There are 10 questions.</p>
-        <p>You have 5 minutes to answer all questions!</p>
-    </div>
-
-    <div class="row">
-        <p>Click Start to begin!</p>
-
-        <button type="button"><a href="#" id="startTimer">Start</a></button>
-    </div>
-
-    <div class="row">
-        <div class="questions">
-            <p class="questions">1. What is the seventh planet from the sun?</p>
-            <p class="choices">
-                <input type="radio" id="q1a">venus<br>
-                <input type="radio" id="q1b">Saturn<br>
-                <input type="radio" id="q1c">Uranus<br>
-                <input type="radio" id="q1d">Jupiter<br>
+        <div class="header">
+           <h1>Hooray! Trivia Quizzes Game Time!!</h1>
+        </div>   
+           
+        </div class="startPage"> 
+           <h2>Instructions:</h2>
+           <p>There are 5 questions.</p>
+           <p>You have 60 seconds to answer all questions!</p>
+           <div class="btn btn-primary" id="start-button">Start</div>
+       </div>
+       
+        <div class="time">
+            <h3 id="timer"></h3>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="questions">
-            <p class="questions">1. What is the seventh planet from the sun?</p>
-            <p class="choices">
-                <input type="radio" id="q1a">venus<br>
-                <input type="radio" id="q1b">Saturn<br>
-                <input type="radio" id="q1c">Uranus<br>
-                <input type="radio" id="q1d">Jupiter<br>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="questions">
-            <p class="questions">1. What is the seventh planet from the sun?</p>
-            <p class="choices">
-                <input type="radio" id="q1a">venus<br>
-                <input type="radio" id="q1b">Saturn<br>
-                <input type="radio" id="q1c">Uranus<br>
-                <input type="radio" id="q1d">Jupiter<br>
-        </div>
-    </div>
-    
-    <div class="row">
-            <div class="questions">
-                <p class="questions">1. What is the seventh planet from the sun?</p>
-            <p class="choices">
-                <input type="radio" id="q1a">venus<br>
-                <input type="radio" id="q1b">Saturn<br>
-                <input type="radio" id="q1c">Uranus<br>
-                <input type="radio" id="q1d">Jupiter<br>
-             </div>
-        </div>
-
-        <div class="row">
-                <div class="questions">
-                    <p class="questions">1. What is the seventh planet from the sun?</p>
-                <p class="choices">
-                    <input type="radio" id="q1a">venus<br>
-                    <input type="radio" id="q1b">Saturn<br>
-                    <input type="radio" id="q1c">Uranus<br>
-                    <input type="radio" id="q1d">Jupiter<br>
-                 </div>
-            </div>
+       
+       <div class="question"></div>
+          <div class="hidden" id="end-page">
+           <h4>Score:</h4>
+           <p id="correctAnswers"></p>
+           <p id="incorrectAnswers"></p>
+           <p id="unAnswered"></p>
+           </div>
+       </div>
 
 
 
@@ -92,26 +48,7 @@
 
 
 
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="assets\javascript\app.js"></script>
+<script src="assets\javascript\app.js"></script>
 </body>
 
 </html>

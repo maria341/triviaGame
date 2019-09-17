@@ -1,114 +1,123 @@
+$(".questions").hide();
+$(".end-game").hide();
+
+$("#Start").click(function() {
+    $(".questions").show();
+    $("#begin-game").hide();
+    $(".end-game").hide();
+    startTimer();
+});
+
+var number = 60;
+var intervalId;
+
+function startTimer() {
+    clearInterval(intervalId);
+    intervalId = setInterval(decrement, 1000);
+}
+
+function decrement() {
+    number--;
+    $("#timer").html("<h3>" + number + "<h3>");
+
+    if (number === 0) {
+    stopTimer();
+    alert("Game over!");
+    $(".questions").hide();
+    $(".end-game").show();
+   }
+}
+
+function stopTimer() {
+    clearInterval(intervalId);
+    number = 60;
+}
+
 $(document).ready(function() {
+  $("input[type ='radio']").on('change', function() {
 
-     
-      var seconds;
-      var time;
-      var answered;
-      var userSelect;
-      var messages ={
-          correct: "Well done",
-          incorrect: "Better Luck Nextime",
-          endTime: "Timer's Up",
+       var q0 = $('input[name="question0"]:checked').val();
+       var q1 = $('input[name="question1"]:checked',"#form").val();
+       var q2 = $('input[name="question2"]:checked',"#form").val();
+       var q3 = $('input[name="question3"]:checked',"#form").val();
+       var q4 = $('input[name="question4"]:checked',"#form").val();
+
+        var countCorrect = 0;
+        var countInCorrect = 0;
+        var countUnAnswered = 0;
+
+     if (q0 == "Uranus") {
+        countCorrect++;
+      }
+     else if (!q0) {
+         countUnAnswered++;
      }
-
-
- var triviaQuestions = [
-    {
-        question: "What is the seventh planet from the sun?",
-        answerlist: ["Saturn", "Venus", "Uranus", "Jupiter"],
-        correct: "Uranus"
-    },
-
-    {
-        question: "How many valves does a trumpet have?",
-        answerList: ["Six", "Four", "Seven", "Three"],
-        correct: "Three"
-    },
-
-    {
-        question: "In the TV series Dad's Army, what was Captain Mainwaring's first name?",
-        answerList: ["James", "George", "Jhon", "Kevin"],
-        correct: "George"
-    },
-
-    {
-        question: "What is the diameter of Earth?",
-        answerList: ["3,000 miles", "11,000 miles", "8,000 miles", "5,000 miles"],
-        correct: "8,000 miles"
-    },
-
-    {
-        question: "When did Margaret Thatcher become Prime Minister?",
-        answerList: ["1979", "1976", "1974", "1970"],
-        correct: "1979"
-    }];
-
-      var currentQuestion;
-      var correctAnswer;
-      var incorrectAnswer;
-      var unAnswered;
- 
- $("#gameCol").hide();
-	
-	//This captures user click on start button to create a new game
-	$("#startBtn").on("click", function(){
-		$(this).hide();
-		newGame();
-    });
+     else {
+         countInCorrect++;
+     }
     
-   //This captures the user's click on the reset button to create a new game
-	$("#startOverBtn").on("click", function(){
-		$(this).hide();
-		newGame();
-	});
-
-    function newGame() {
-        $("#game").show();
-        $("#finalMessage").empty();
-        $("#correctAnswer").empty();
-        $("#incorrectAnswer").empty();
-        $("#unAnswered").empty();
-        
-        currentQuestion = 0;
-        correctAnswer = 0;
-        incorrectAnswer = 0;
-        unAnswered = 0;
-        newQuestion();
+     if (q1 == "Golf") {
+         countCorrect++;
+     }
+    else if (!q1) {
+        countUnAnswered++;
+    }
+    else {
+        countInCorrect++;
+    }
+    
+    if (q2 == "8,000 miles") {
+        countCorrect++;
+    }
+    else if (!q2) {
+        countUnAnswered++;
+    }
+    else {
+        countInCorrect++;
     }
 
-    function newQuestion() {
-        $("#message").empty();
-        $("#correctAnswer").empty();
-        answered = true;
+    if (q3 == "Three") {
+        countCorrect++;
+    }
+    else if (!q3) {
+        countUnAnswered++;
+    }
+    else {
+        countInCorrect++;
+    }
 
-        $("#currentQuestion").html("Question " + (currentQuestion+1) + " of " + triviaQuestions.length);
-		$(".question").html(triviaQuestions[currentQuestion].question);
+    if (q4 == "1979") {
+        countCorrect++;
+    }
+    else if (!q4) {
+        countUnAnswered++;
+    }
+    else {
+        countInCorrect++;
+    }
 
-
-        //create foe loop
-        for (var i = 0; i < 5; i++) {
-
-            var choices = $("<div>");
-            choices.text(triviaQuestions[currentQuestion].answerList[i]););
-            choices.attr({"data-index": i });
-            choices.addClass("thisChoice");
-			$(".answerList").append(choices);
-        }
-
-        //========================
-
-         countdown();
-
-		//When user clicks on n answer this will pause the time and display the correct answer to the question 
-		$(".thisChoice").on("click",function(){
-				userSelect = $(this).data("index");
-				clearInterval(time);
-				answerPage();
-    })
+    $("#correct").html("<h5>" + countCorrect + "<h5>");
+    $("#inCorrect").html("<h5>" + countInCorrect + "<h5>");
+    $("#unAnswered").html("<h5>" + countUnAnswered + "<h5>");
+   
 
 
+  });
 
 
+});
 
+$("#submit").click(function() {
+    stopTimer();
+    $(".questions").hide();
+    $("#begin-game").hide();
+    $(".end-game").show();
 
-})
+});
+
+$("#playAgain").click(function(){
+    $(".questions").hide();
+    $("#begin-name").show();
+    $(".end-game").hide();
+    stopTimer()
+});

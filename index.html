@@ -18,41 +18,153 @@
 </head>
 
 <body>
-    <div id="container">
-        <h1>Horray! Trivia Time</h1>
-        <p></p>
+
+    <div class="row" id="begin-game">
+
+        <div class="container">
+            <div class="row">
+                <h1>Horray! Trivia Time!</h1>
+            </div>
+
+            <div class="row">
+
+                <div class="col md-8">
+                    <button id="Start">Start</button>
+                </div>
+
+                <div class="col-md-6">
+                    <img src="assets\images\trivia logo.jpg" id="trivia">
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="image">
-        <img src="assets\images\trivia.jpg" alt="trivia game" class="img-responsive center-block" id="title">
-    </div>
+    <div class="questions">
+        <div class="container">
+            <div class="row">
+                <h1>Horray! Trivia Time!</h1>
+            </div>
 
-    <div id="game">
-        <div id="currentQuestion"></div>
-        <div id="timeLeft"></div>
-        <div class="question"></div>
-        <div class="answerList"></div>
-    </div>
+            <div class="row" id="timer">
+                <h3>Timer:</h3>
+            </div>
 
-    <!--When each answers displayed-->
-         <div id="message"></div>
-         <div id="correctedAnswer"></div>
+            <div class="row">
+                <div class="col-md-8">
+                    <form id="form">
+
+                        <div class="formquestion0">
+                            <h4>What is the seventh planet from the sun?</h4>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="Jupiter">Jupiter</label>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="Uranus">Uranus</label>
+                            <labe class="answers">
+                                 <input type="radio" name="question0" value="Saturn">Saturn</label>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="Mars">Mars</label>
+                        </div>
+
+                        <div class="formquestion1">
+                            <h4>What sport does Constatino Rocca play?</h4>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="Football">Football</label>
+                            <labe class="answers">
+                                 <input type="radio" name="question0" value="Soccer">Soccer</label>
+                            <labe class="answers">
+                                 <input type="radio" name="question0" value="Basketball">basketball</label>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="Golf">golf</label>
+                        </div>
+
+                        <div class="formquestion2">
+                            <h4>What is the diameter of Earth?</h4>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="8,000 miles">8,000 miles</label>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="6,000 miles">6,000 miles</label>
+                            <labe class="answers">
+                                 <input type="radio" name="question0" value="3,000 miles">3,000 miles</label>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="5,000 miles">5,000 miles</label>
+                        </div>
+     
+                        <div class="formquestion3">
+                                <h4>How many valves does a trumpet have?</h4>
+                                <labe class="answers">
+                                    <input type="radio" name="question0" value="Six">Six</label>
+                                <labe class="answers">
+                                    <input type="radio" name="question0" value="Three">Three</label>
+                                <labe class="answers">
+                                    <input type="radio" name="question0" value="Seven">Seven</label>
+                                <labe class="answers">
+                                    <input type="radio" name="question0" value="Four">Four</label>
+                        </div>
         
+                        <div class="formquestion4">
+                                <h4>When did Margaret Thatcher become Prime Minister?</h4>
+                                <labe class="answers">
+                                    <input type="radio" name="question0" value="1974">1974</label>
+                                <labe class="answers">
+                                    <input type="radio" name="question0" value="1970">1970</label>
+                                <labe class="answers">
+                                    <input type="radio" name="question0" value="1979">1979</label>
+                                <labe class="answers">
+                                    <input type="radio" name="question0" value="1976">1976</label>
+                        </div>
+                 </form>
+            </div>
 
-    <!-- WHEN RESULTS ARE DISPLAYED -->
-         <div id="finalMessage"></div>
-         <div id="correctAnswers"></div>
-         <div id="incorrectAnswers"></div>
-         <div id="unanswered"></div>
-         <div id="startOverBtn"></div>
+            <div class="col-md-6">
+                <img src="assets\images\trivia logo.jpg" alt="">
+            </div>
+        </div>
+        
+        <div class="row">
+            <button id="submit">SUBMIT</button>
+        </div>
+    </div>
 </div>
-</div>
+        
+<!--End-->
 
-     <!-- jQuery -->
+<div class="end-game">
+            <div class="row">
+                <h2>Your Time is Up!</h2>
+            </div>
+
+             <div class="row" id="score">
+                 <table>
+                     <tr>
+                         <td class="score">Correct:</td>
+                         <td id="correct"><h5>0</h5></td>
+                     </tr>
+
+                     <tr>
+                        <td class="score">InCorrect:</td>
+                        <td id="inCorrect"><h5>0</h5></td>
+                    </tr>
+
+                     <tr>
+                        <td class="score">UnAnswered:</td>
+                        <td id="unAnswered"><h5>5</h5></td>
+                    </tr>    
+                 </table>
+            </div>
+
+            <div class="row" id="playAgain">
+                <button>Start Over!</button>
+            </div>
+    </div>
+</div>
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
- 
-     <!--Javascript link-->
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!--Javascript link-->
     <script src="assets\javascript\app.js"></script>
 </body>
 

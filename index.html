@@ -8,141 +8,121 @@
     <title>Trivia Game</title>
     <!--google font link-->
     <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
-    <!--Css link-->
+   <!--Bootstrap link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"crossorigin="anonymous">
+   <!--Css link-->
     <link rel="stylesheet" type="text/css" href="assets\css\style.css">
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
+    
 </head>
 
 <body>
-
-    <div class="row" id="begin-game">
-
-        <div class="container">
-            <div class="row">
-                <h1>Horray! Trivia Time!</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+           <div id="start-game">
+               <img src="assets\images\trivialogo.jpg" id="trivia">
+                <br>
+                <h1>Time! Trivial Trivia!!</h1>
+                <br>
+                <button id="start">Start</button>
+                <hr>
             </div>
-
-            <div class="row">
-
-                <div class="col md-8">
-                    <button id="Start">Start</button>
-                </div>
-
-                <div class="col-md-6">
-                    <img src="assets\images\trivia logo.jpg" id="trivia">
-                </div>
-
-            </div>
-
         </div>
-
-    </div>
-
-    <div class="questions">
-        <div class="container">
-            <div class="row">
-                <h1>Horray! Trivia Time!</h1>
+     </div>
+<!--Questions and timer-->
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="questions">
+                   <img src="assets\images\trivialogo.jpg" id="trivia"><br>
+                    <h1>Time! Trivial Trivia!</h1>
+                    <br>
+           <div class="row" id="timer">
+            <h3>Timer:</h3>
             </div>
+           
+             <form id="form">
 
-            <div class="row" id="timer">
-                <h3>Timer:</h3>
-            </div>
+                    <div class="formquestion0">
+                        <h4>What is the seventh planet from the sun?</h4>
+                        <labe class="answers">
+                            <input type="radio" name="question0" value="Jupiter">Jupiter</label>
+                        <labe class="answers">
+                            <input type="radio" name="question0" value="Uranus">Uranus</label>
+                        <labe class="answers">
+                             <input type="radio" name="question0" value="Saturn">Saturn</label>
+                        <labe class="answers">
+                             <input type="radio" name="question0" value="Mars">Mars</label>
+                    </div>
 
-            <div class="row">
-                <div class="col-md-8">
-                    <form id="form">
+                    <div class="formquestion1">
+                        <h4>What sport does Constatino Rocca play?</h4>
+                         <labe class="answers">
+                            <input type="radio" name="question0" value="Football">Football</label>
+                         <labe class="answers">
+                            <input type="radio" name="question0" value="Soccer">Soccer</label>
+                        <labe class="answers">
+                            <input type="radio" name="question0" value="Basketball">basketball</label>
+                        <labe class="answers">
+                            <input type="radio" name="question0" value="Golf">golf</label>
+                    </div>
 
-                        <div class="formquestion0">
-                            <h4>What is the seventh planet from the sun?</h4>
-                            <labe class="answers">
-                                <input type="radio" name="question0" value="Jupiter">Jupiter</label>
-                            <labe class="answers">
-                                <input type="radio" name="question0" value="Uranus">Uranus</label>
-                            <labe class="answers">
-                                 <input type="radio" name="question0" value="Saturn">Saturn</label>
-                            <labe class="answers">
-                                <input type="radio" name="question0" value="Mars">Mars</label>
-                        </div>
-
-                        <div class="formquestion1">
-                            <h4>What sport does Constatino Rocca play?</h4>
-                            <labe class="answers">
-                                <input type="radio" name="question0" value="Football">Football</label>
-                            <labe class="answers">
-                                 <input type="radio" name="question0" value="Soccer">Soccer</label>
-                            <labe class="answers">
-                                 <input type="radio" name="question0" value="Basketball">basketball</label>
-                            <labe class="answers">
-                                <input type="radio" name="question0" value="Golf">golf</label>
-                        </div>
-
-                        <div class="formquestion2">
-                            <h4>What is the diameter of Earth?</h4>
-                            <labe class="answers">
-                                <input type="radio" name="question0" value="8,000 miles">8,000 miles</label>
-                            <labe class="answers">
-                                <input type="radio" name="question0" value="6,000 miles">6,000 miles</label>
-                            <labe class="answers">
-                                 <input type="radio" name="question0" value="3,000 miles">3,000 miles</label>
-                            <labe class="answers">
-                                <input type="radio" name="question0" value="5,000 miles">5,000 miles</label>
-                        </div>
+                    <div class="formquestion2">
+                         <h4>What is the diameter of Earth?</h4>
+                         <labe class="answers">
+                            <input type="radio" name="question0" value="8,000 miles">8,000 miles</label>
+                        <labe class="answers">
+                            <input type="radio" name="question0" value="6,000 miles">6,000 miles</label>
+                        <labe class="answers">
+                            <input type="radio" name="question0" value="3,000 miles">3,000 miles</label>
+                        <labe class="answers">
+                            <input type="radio" name="question0" value="5,000 miles">5,000 miles</label>
+                    </div>
      
-                        <div class="formquestion3">
-                                <h4>How many valves does a trumpet have?</h4>
-                                <labe class="answers">
-                                    <input type="radio" name="question0" value="Six">Six</label>
-                                <labe class="answers">
-                                    <input type="radio" name="question0" value="Three">Three</label>
-                                <labe class="answers">
-                                    <input type="radio" name="question0" value="Seven">Seven</label>
-                                <labe class="answers">
-                                    <input type="radio" name="question0" value="Four">Four</label>
-                        </div>
+                    <div class="formquestion3">
+                            <h4>How many valves does a trumpet have?</h4>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="Six">Six</label>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="Three">Three</label>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="Seven">Seven</label>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="Four">Four</label>
+                    </div>
         
-                        <div class="formquestion4">
-                                <h4>When did Margaret Thatcher become Prime Minister?</h4>
-                                <labe class="answers">
-                                    <input type="radio" name="question0" value="1974">1974</label>
-                                <labe class="answers">
-                                    <input type="radio" name="question0" value="1970">1970</label>
-                                <labe class="answers">
-                                    <input type="radio" name="question0" value="1979">1979</label>
-                                <labe class="answers">
-                                    <input type="radio" name="question0" value="1976">1976</label>
-                        </div>
-                 </form>
-            </div>
-
-            <div class="col-md-6">
-                <img src="assets\images\trivia logo.jpg" alt="">
+                    <div class="formquestion4">
+                            <h4>When did Margaret Thatcher become Prime Minister?</h4>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="1974">1974</label>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="1970">1970</label>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="1979">1979</label>
+                            <labe class="answers">
+                                <input type="radio" name="question0" value="1976">1976</label>
+                      </div>
+                    </form>
+                     <button id="submit">SUBMIT</button>
+                 </div>
             </div>
         </div>
         
-        <div class="row">
-            <button id="submit">SUBMIT</button>
-        </div>
-    </div>
-</div>
-        
-<!--End-->
-
-<div class="end-game">
-            <div class="row">
-                <h2>Your Time is Up!</h2>
-            </div>
-
-             <div class="row" id="score">
+<!--End Page-->
+        <div class='row'>
+            <div class="col-lg-12 text-center">
+               <div id="end-game">
+                <img src="assets\images\trivialogo.jpg" id="trivia"><br>
+                <h1>Time! Trivial Trivia!</h1>
+                <br> 
+                <div class="row" id="score">
                  <table>
                      <tr>
                          <td class="score">Correct:</td>
                          <td id="correct"><h5>0</h5></td>
                      </tr>
 
+                     
                      <tr>
                         <td class="score">InCorrect:</td>
                         <td id="inCorrect"><h5>0</h5></td>
@@ -153,14 +133,14 @@
                         <td id="unAnswered"><h5>5</h5></td>
                     </tr>    
                  </table>
-            </div>
-
-            <div class="row" id="playAgain">
-                <button>Start Over!</button>
-            </div>
+                <button id="restart">Start Over!</button>
+                </div>
+              </div>
+        </div>
     </div>
 </div>
-    <!-- jQuery -->
+
+<!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 

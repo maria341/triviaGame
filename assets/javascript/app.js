@@ -1,14 +1,15 @@
-$(".questions").hide();
-$(".end-game").hide();
 
-$("#Start").click(function() {
-    $(".questions").show();
-    $("#begin-game").hide();
-    $(".end-game").hide();
+$("#questions").hide();
+$("#end-game").hide();
+
+$("#start").click(function() {
+    $("#questions").show();
+    $("#start-game").hide();
+    $("#end-game").hide();
     startTimer();
 });
 
-var number = 60;
+var number = 35;
 var intervalId;
 
 function startTimer() {
@@ -18,29 +19,29 @@ function startTimer() {
 
 function decrement() {
     number--;
-    $("#timer").html("<h3>" + number + "<h3>");
+    $("#timer").html("<h3>Time Remaining: " + number + "<h3>");
 
     if (number === 0) {
     stopTimer();
     alert("Game over!");
-    $(".questions").hide();
-    $(".end-game").show();
+    $("#questions").hide();
+    $("#end-game").show();
    }
 }
 
 function stopTimer() {
     clearInterval(intervalId);
-    number = 60;
+    number = 35;
 }
 
 $(document).ready(function() {
   $("input[type ='radio']").on('change', function() {
 
        var q0 = $('input[name="question0"]:checked').val();
-       var q1 = $('input[name="question1"]:checked',"#form").val();
-       var q2 = $('input[name="question2"]:checked',"#form").val();
-       var q3 = $('input[name="question3"]:checked',"#form").val();
-       var q4 = $('input[name="question4"]:checked',"#form").val();
+       var q1 = $('input[name=question1]:checked',"#form").val();
+       var q2 = $('input[name=question2]:checked',"#form").val();
+       var q3 = $('input[name=question3]:checked',"#form").val();
+       var q4 = $('input[name=question4]:checked',"#form").val();
 
         var countCorrect = 0;
         var countInCorrect = 0;
@@ -109,15 +110,29 @@ $(document).ready(function() {
 
 $("#submit").click(function() {
     stopTimer();
-    $(".questions").hide();
-    $("#begin-game").hide();
-    $(".end-game").show();
+    $("#questions").hide();
+    $("#start-game").hide();
+    $("#end-game").show();
 
 });
 
-$("#playAgain").click(function(){
-    $(".questions").hide();
-    $("#begin-name").show();
-    $(".end-game").hide();
+$("#restart").click(function(){
+    $("#questions").hide();
+    $("#start-game").show();
+    $("#end-game").hide();
     stopTimer()
 });
+   
+  
+
+
+
+
+
+
+
+
+     
+   
+
+

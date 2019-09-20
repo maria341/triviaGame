@@ -32,11 +32,11 @@
 <!--Questions and timer-->
     
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12 text-center">
             <div id="questions">
                    <img src="assets\images\trivialogo.jpg" id="trivia"><br>
-                    <h1>Time! Trivial Trivia!</h1>
-                    <br>
+                    <h1>Time! Trivial Trivia!</h1><hr>
+                     <br>
            <div class="row" id="timer">
             <h3>Timer:</h3>
             </div>
@@ -58,51 +58,52 @@
                     <div class="formquestion1">
                         <h4>What sport does Constatino Rocca play?</h4>
                          <labe class="answers">
-                            <input type="radio" name="question0" value="Football">Football</label>
+                            <input type="radio" name="question1" value="Football">Football</label>
                          <labe class="answers">
-                            <input type="radio" name="question0" value="Soccer">Soccer</label>
+                            <input type="radio" name="question1" value="Soccer">Soccer</label>
                         <labe class="answers">
-                            <input type="radio" name="question0" value="Basketball">basketball</label>
+                            <input type="radio" name="question1" value="Basketball">basketball</label>
                         <labe class="answers">
-                            <input type="radio" name="question0" value="Golf">golf</label>
+                            <input type="radio" name="question1" value="Golf">golf</label>
                     </div>
 
                     <div class="formquestion2">
                          <h4>What is the diameter of Earth?</h4>
                          <labe class="answers">
-                            <input type="radio" name="question0" value="8,000 miles">8,000 miles</label>
+                            <input type="radio" name="question2" value="8,000 miles">8,000 miles</label>
                         <labe class="answers">
-                            <input type="radio" name="question0" value="6,000 miles">6,000 miles</label>
+                            <input type="radio" name="question2" value="6,000 miles">6,000 miles</label>
                         <labe class="answers">
-                            <input type="radio" name="question0" value="3,000 miles">3,000 miles</label>
+                            <input type="radio" name="question2" value="3,000 miles">3,000 miles</label>
                         <labe class="answers">
-                            <input type="radio" name="question0" value="5,000 miles">5,000 miles</label>
+                            <input type="radio" name="question2" value="5,000 miles">5,000 miles</label>
                     </div>
      
                     <div class="formquestion3">
                             <h4>How many valves does a trumpet have?</h4>
                             <labe class="answers">
-                                <input type="radio" name="question0" value="Six">Six</label>
+                                <input type="radio" name="question3" value="Six">Six</label>
                             <labe class="answers">
-                                <input type="radio" name="question0" value="Three">Three</label>
+                                <input type="radio" name="question3" value="Three">Three</label>
                             <labe class="answers">
-                                <input type="radio" name="question0" value="Seven">Seven</label>
+                                <input type="radio" name="question3" value="Seven">Seven</label>
                             <labe class="answers">
-                                <input type="radio" name="question0" value="Four">Four</label>
+                                <input type="radio" name="question3" value="Four">Four</label>
                     </div>
         
                     <div class="formquestion4">
                             <h4>When did Margaret Thatcher become Prime Minister?</h4>
                             <labe class="answers">
-                                <input type="radio" name="question0" value="1974">1974</label>
+                                <input type="radio" name="question4" value="1974">1974</label>
                             <labe class="answers">
-                                <input type="radio" name="question0" value="1970">1970</label>
+                                <input type="radio" name="question4" value="1970">1970</label>
                             <labe class="answers">
-                                <input type="radio" name="question0" value="1979">1979</label>
+                                <input type="radio" name="question4" value="1979">1979</label>
                             <labe class="answers">
-                                <input type="radio" name="question0" value="1976">1976</label>
+                                <input type="radio" name="question4" value="1976">1976</label>
                       </div>
                     </form>
+                    <br>
                      <button id="submit">SUBMIT</button>
                  </div>
             </div>
@@ -114,28 +115,19 @@
                <div id="end-game">
                 <img src="assets\images\trivialogo.jpg" id="trivia"><br>
                 <h1>Time! Trivial Trivia!</h1>
-                <br> 
-                <div class="row" id="score">
-                 <table>
-                     <tr>
-                         <td class="score">Correct:</td>
-                         <td id="correct"><h5>0</h5></td>
-                     </tr>
-
+                <hr>
+                <br><br> 
+                <div class="score">
+                   
+                    <div id="correct"></div>
                      
-                     <tr>
-                        <td class="score">InCorrect:</td>
-                        <td id="inCorrect"><h5>0</h5></td>
-                    </tr>
-
-                     <tr>
-                        <td class="score">UnAnswered:</td>
-                        <td id="unAnswered"><h5>5</h5></td>
-                    </tr>    
-                 </table>
-                <button id="restart">Start Over!</button>
+                    <div id="inCorrect"></div>
+                     
+                    <div id="unAnswered"></div>
+                     <br>
+                     
+                     <button id="restart">Start Over!</button>
                 </div>
-              </div>
         </div>
     </div>
 </div>

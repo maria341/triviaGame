@@ -5,5 +5,46 @@ body {
 h1 {
     color: #8b4513;
     font-size: 65px;
-    font-style: 'AmstelvarAlpha', sans-serif;
+    font-style: bold;
+}
+
+h4 {
+     font-size: 30px;
+}
+
+#start {
+    width: 100px;
+    height: 70px;
+    color: red;
+    font-family: Georgia, serif;
+    font-size: 30px;
+}
+
+#submit {
+     width: 120px;
+     color: red;
+     height: 60px;
+     font-family: Georgia, serif;
+     font-size: 20px;
+}
+
+#restart {
+    width: 100px;
+     color: red;
+     height: 70px;
+     font-family: bold;
+     font-size: 20px;
+}
+
+input[type="radio"] {
+   margin: 0 6px 0 6px;
+}
+
+.answers {
+    font-size: 20px;
+}
+
+.score {
+    font-size: 80px;
+    font-family: Georgia, serif;
 }

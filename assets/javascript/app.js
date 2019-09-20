@@ -2,6 +2,7 @@
 $("#questions").hide();
 $("#end-game").hide();
 
+//Create a function that will start if the player click the button
 $("#start").click(function() {
     $("#questions").show();
     $("#start-game").hide();
@@ -9,9 +10,13 @@ $("#start").click(function() {
     startTimer();
 });
 
-var number = 35;
+//create variables called number and assigned 30 seconds on it
+var number = 30;
+
+//Declaring the empty variables for intervalId
 var intervalId;
 
+//creating function to start the timer
 function startTimer() {
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
@@ -31,8 +36,10 @@ function decrement() {
 
 function stopTimer() {
     clearInterval(intervalId);
-    number = 35;
+    number = 30;
 }
+
+//use ready() to make a function to load the documents inside of it
 
 $(document).ready(function() {
   $("input[type ='radio']").on('change', function() {
@@ -97,9 +104,9 @@ $(document).ready(function() {
         countInCorrect++;
     }
 
-    $("#correct").html("<h5>" + countCorrect + "<h5>");
-    $("#inCorrect").html("<h5>" + countInCorrect + "<h5>");
-    $("#unAnswered").html("<h5>" + countUnAnswered + "<h5>");
+    $("#correct").html("<h5>Correct: " + countCorrect + "<h5>");
+    $("#inCorrect").html("<h5>Incorrect: " + countInCorrect + "<h5>");
+    $("#unAnswered").html("<h5>Skipped Question: " + countUnAnswered + "<h5>");
    
 
 
@@ -108,6 +115,7 @@ $(document).ready(function() {
 
 });
 
+//Create the submit function to click the button
 $("#submit").click(function() {
     stopTimer();
     $("#questions").hide();
@@ -116,15 +124,18 @@ $("#submit").click(function() {
 
 });
 
+//create the restart function to click the button
 $("#restart").click(function(){
     $("#questions").hide();
     $("#start-game").show();
     $("#end-game").hide();
-    stopTimer()
+    stopTimer();
+  
+    
 });
    
   
-
+restart();
 
 
 
